@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>独家回忆</title>
+    <style>
+        body {
+            font-family: 'Microsoft YaHei', sans-serif;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            background-color: #f5f5f5;
+        }
+        
+        .container {
+            text-align: center;
+        }
+        
+        h1 {
+            font-size: 3rem;
+            cursor: pointer;
+            color: #333;
+            transition: color 0.3s;
+        }
+        
+        h1:hover {
+            color: #ff6b6b;
+        }
+        
+        .photo {
+            max-width: 80%;
+            margin-top: 20px;
+            display: none;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <h1 id="mainText">龙俊明的大屎忽窿</h1>
+        <img id="photo" class="photo" src="photo.jpg" alt="照片">
+    </div>
+
+    <script>
+        document.getElementById('mainText').addEventListener('click', function() {
+            const photo = document.getElementById('photo');
+            if (photo.style.display === 'none' || photo.style.display === '') {
+                photo.style.display = 'block';
+            } else {
+                photo.style.display = 'none';
+            }
+        });
+    </script>
+</body>
+
+</html>
